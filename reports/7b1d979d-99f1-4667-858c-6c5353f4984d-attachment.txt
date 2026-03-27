@@ -1,0 +1,9 @@
+Successfully clicked on element: //a[text()='Sign Up']
+Signup link clicked
+Name entered: swastika Majhi
+Email entered: majhiswastika715@gmail.com
+Password entered: Swastika@123
+Successfully clicked on element: //button[@role='checkbox']
+checkbox is clicked
+Successfully clicked on element: //button[normalize-space(text())='Sign Up']
+Clicked on Signup button

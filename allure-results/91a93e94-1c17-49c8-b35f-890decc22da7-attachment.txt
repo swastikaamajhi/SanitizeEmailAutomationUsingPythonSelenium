@@ -1,8 +1,0 @@
-cdSuccessfully clicked on element: //button[normalize-space()='Sign Up']
-Name entered: Swastika
-email entered: majhiswastika715@gmail.com
-password entered: Swastika@123
-Successfully clicked on element: //button[@id='«r9»-form-item']
-checkbox clicked
-Successfully clicked on element: //button[normalize-space()='Sign Up']
-Signup button clicked

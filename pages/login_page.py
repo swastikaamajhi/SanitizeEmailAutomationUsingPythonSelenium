@@ -1,19 +1,23 @@
 from .base_page import BasePage
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 import allure
 import time
 
 class LoginPage(BasePage):
-    Email_Input="//input[@type='text']"
-    Password_Input="//input[@type='password']"
+    URL="https://app.sanitizeemail.com/login"
+    Email_Input="//input[@name='email']"
+    Password_Input="//input[@name='password']"
     Checkbox="//button[@role='checkbox']"
-    Login_Button="//button[@type='submit']"
+    Login_Button="//button[text()='Log In']"
+
 
     def __init__(self,driver):
         super().__init__(driver)
         self.driver=driver
 
-    @allure.step("Enter login credentials")
+    @allure.step("click on Login credential")
     def enter_login_credentials(self,email,password):
         self.send_keys_to_element(self.Email_Input, email)
         print(f"Email entered: {email}")
@@ -27,8 +31,9 @@ class LoginPage(BasePage):
         print(f"checkbox is clicked")
         return True
 
-    @allure.step("Click Login button")
+    @allure.step("Click on LOgin")
     def click_login(self):
         self.click_element(self.Login_Button)
-        print(f"Click on login button")
+        print("Clicked on login button")
         return True
+
