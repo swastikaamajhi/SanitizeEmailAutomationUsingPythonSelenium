@@ -1,6 +1,0 @@
-Email entered: majhiswastika715@gmail.com
-Password entered: Swastika@123
-Successfully clicked on element: //button[@role='checkbox']
-checkbox is clicked
-Successfully clicked on element: //button[text()='Log In']
-Clicked on login button

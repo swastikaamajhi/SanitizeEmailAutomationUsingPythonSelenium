@@ -10,3 +10,4 @@ Successfully clicked on element: //div[text()='List Validation']
 List validation Clicked
 Successfully clicked on element: //span[normalize-space()='Add List']
 add list clicked
+Successfully clicked on element: //textarea[@id='emails']

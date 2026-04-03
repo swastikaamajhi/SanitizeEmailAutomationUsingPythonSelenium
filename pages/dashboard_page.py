@@ -11,6 +11,7 @@ class DashboardPage(BasePage):
     List_validation="//div[text()='List Validation']"
     Add_List="//span[normalize-space()='Add List']"
     Enter_Emails="//textarea[@id='emails']"
+    Run_Validation="//button[text()='Run Validation']"
 
     def __init__(self,driver):
         super().__init__(driver)
@@ -37,3 +38,8 @@ class DashboardPage(BasePage):
         self.click_element(self.Enter_Emails)
         send_keys_to_element(self.Enter_Emails, emails)
         print(f"Emails entered: {emails}")
+
+    @allure.step("click run validation")
+    def click_run_validation(self):
+        click_element(self.Run_Validation)
+        print(f"clicked on run validation")

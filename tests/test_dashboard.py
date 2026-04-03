@@ -1,6 +1,6 @@
 from pages.login_page import LoginPage
 from pages.dashboard_page import DashboardPage
-
+from utils.read_data import read_emails
 def test_dashboard(driver):
 
     # Login
@@ -15,4 +15,8 @@ def test_dashboard(driver):
     dashboard_page.click_verify_email()
     dashboard_page.click_file_validation()
     dashboard_page.click_add_list()
-    dashboard_page.enter_emails( "test1@gmail.com\ninvalid-email\nabc@domain\ntest_123@outlook.com")
+    emails_list = read_emails()
+    emails_text = "\n".join(emails_list)  # multiline string for textarea
+    dashboard_page.enter_emails(emails_text)
+
+    dashboard_page.click_run_validation()
